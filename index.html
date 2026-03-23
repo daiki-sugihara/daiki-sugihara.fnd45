@@ -6,5 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./golf.css" />
 </head>
->
+
+
+<body>
+  <main class="box" role="main" >
+    <h1 style="font-size: 22px">最適クラブセレクター</h1>
+
+    <p style="color: #636161; font-size: 14px">残りヤード数を入力すると、おすすめのクラブを表示します。</p>
+
+    <div>
+      <input
+        id="yardInput"
+        class="input"
+        type="number"
+        min="0"
+        step="1"
+        placeholder="残りヤード数(yd)"
+      />
+      <button id="decideBtn" class="btn" type="button">クラブを選ぶ</button>
+    </div>
+
+    <p style="color: #636161; font-size: 12px";>※ レンジはあなたの平均飛距離に合わせて調整してください。</p>
+
+    <section id="result" class="result" ></section>
+
+      <h2 style="font-size: 18px">平均飛距離設定</h2>
+      <div class="ranges" id="rangeList"></div>
+
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
 </html>
