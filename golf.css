@@ -1,0 +1,50 @@
+
+body {
+  background-color: rgb(0, 0, 0); 
+  margin: 300px ;                 
+}
+
+
+.box {
+  width: 400px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+
+.input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #636161;
+  border-radius: 6px;
+}
+
+
+.btn {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border-color:white ;
+}
+
+
+.result {
+  padding: 12px;
+  border: 1px solid #636161;
+  border-radius: 6px;
+  margin: 0px;
+}
+
+
+
+.chip {
+  border: 1px solid #636161;
+  padding: 6px 8px;
+  margin: 6px;
+  font-size: 14px;
+  border-radius: 6px;
+} 
