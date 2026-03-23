@@ -1,4 +1,3 @@
-
 const clubRanges = [
   { name: "DR(ドライバー)",         min: 210, max: 260 },
   { name: "5W(5番ウッド)",          min: 190, max: 220 },
