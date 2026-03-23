@@ -30,15 +30,13 @@ function selectClub(yards) {
       bestClub = club;   
     }
   }
-
   return bestClub;
 }
 
 
 function showResult(yards, club) {
   const resultElemnt = document.getElementById("result");
-  resultElemnt.innerHTML =
-    "<p> 残り" + yards + "ydのおすすめ：" + club["name"] + "</p>" 
+  resultElemnt.innerHTML =  "<p> 残り" + yards + "ydのおすすめ：" + club["name"] + "</p>"   //HTML内のresultタグ(resultElement)の内容を「残り～」に書き換える。
 }
 
 
@@ -46,21 +44,18 @@ function showResult(yards, club) {
 function decide() {
   const yards = document.getElementById("yardInput").valueAsNumber; // .valueAsNumberは要素の値を取り出して、数値に変換
   const club = selectClub(yards);
-  showResult(yards, club);
+  showResult(yards, club);  //前段で定義したshowResult関数を実行
 }
 
 
 function rangeList() {
-  const wrap = document.getElementById("rangeList");
-
+  const rangeListElement = document.getElementById("rangeList");
   let html = "";
   for (const club of clubRanges) {
     html +=
-      "<div class='chip'>" +
-         club["name"] + "  :  "  + club["min"] + "〜" + club["max"] + " yd" +
-      "</div>";
+      "<div class='range'>" + club["name"] + "  :  "  + club["min"] + "〜" + club["max"] + " yd" + "</div>";
   }
-  wrap.innerHTML = html;
+  rangeListElement.innerHTML = html;
 }
 
 
