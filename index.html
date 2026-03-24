@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
-  <title>最適クラブセレクター</title>
+  <title>ゴルフ支援webアプリ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./golf.css" />
 </head>
 
-
 <body>
-  <main class="box" role="main" >
-    <h1 style="font-size: 22px">最適クラブセレクター</h1>
+  <main class="box">
 
-    <p style="color: #636161; font-size: 14px">残りヤード数を入力すると、おすすめのクラブを表示します。</p>
+    <h1 class="title">最適クラブセレクター</h1>
+    <p style="color:#1f1f1f; font-size:16px;">
+      残りヤード数を入力すると、おすすめのクラブを表示します。
+    </p>
 
-    <div>
-      <input
-        id="yardInput"
-        class="input"
-        type="number"
-        min="0"
-        step="1"
-        placeholder="残りヤード数(yd)"
-      />
-      <button id="decideBtn" class="btn" type="button">クラブを選ぶ</button>
+
+    <div class="form-container">
+
+    
+      <div class="left-column">
+
+        <h3>残りヤード数入力</h3>
+        <div>
+          <input id="yardInput" class="input" type="number" placeholder="残りヤード数(yd)">
+        </div>
+
+        <div style="height:30px;"></div>
+
+        <h3>風（向かい風・追い風）</h3>
+        <input id="windInput" class="input" type="number" placeholder="向かい風=プラス / 追い風=マイナス（m/s）">
+
+        <div style="height:30px;"></div> 
+
+        <h3>高低差（打ち上げ・打ち下ろし）</h3>
+        <input id="slope" class="input" type="number" placeholder="打ち上げ=プラス / 打ち下ろし=マイナス">
+
+        <div style="height:30px;"></div> 
+
+        
+        <h3 class="club-title">おすすめクラブ</h3>
+        <button id="decideBtn" class="btn" type="button">⛳ シミュレーション実行</button>
+
+        <div style="height:30px;"></div> 
+
+        <div id="result" class="result"></div>
+
+      </div>
+
+      
+      <div class="right-column">
+
+        <h3>平均飛距離(任意)</h3>
+        
+        <div id="rangeList"></div>
+
+      </div>
+
     </div>
-
-    <p style="color: #636161; font-size: 12px";>※ レンジはあなたの平均飛距離に合わせて調整してください。</p>
-
-    <div id="result" class="result" ></div>
-
-    <h2 style="font-size: 18px">レンジ設定</h2>
-    <div id="rangeList"></div>
 
   </main>
 
-  <script src="./script.js" defer></script>
+
+
+  <div class="box score-box">
+
+    <h1 class="title">スコアカウンター</h1>
+    <p style="color:#1f1f1f; font-size:16px;">各ホールのスコアを入力してください。</p>
+
+    <div class="score-grid">
+
+      <script>
+        for (var i = 1; i <= 18; i++) {
+          document.write('<div class="score-item">');
+          document.write('<label>' + i + 'H</label>');
+          document.write('<input type="number" class="scoreInput" id="score' + i + '">');
+          document.write('</div>');
+        }
+      </script>
+    </div>
+
+    <h3>合計スコア</h3>
+    <button class="btn" type="button" onclick="calcScore()">✅合計を計算</button>
+    <div style="height:10px;"></div> 
+  
+    <div id="totalScore" class="result"></div>
+
+  </div>
+
+
+  <script src="./script.js"></script>
 </body>
+
 </html>
