@@ -1,50 +1,119 @@
 body {
-  background-color: rgb(0, 0, 0); 
-  margin: 50px ;                 
+  margin: 100px;
+  background-image: url("https://cdn.pixabay.com/photo/2019/10/18/15/42/golf-4559475_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.95;
 }
 
 
 .box {
-  width: 400px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px auto;
   background: white;
   border-radius: 8px;
   padding: 20px;
 }
 
+.title {
+      font-size: 26px; 
+      font-weight: bold; 
+      padding: 8px 0; 
+      border-bottom: 3px solid #4caf50;
+      display: inline-block;
+}
+
+
+.form-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.left-column {
+  flex: 1;
+  min-width: 350px;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 350px;
+}
 
 
 .input {
   flex: 1;
+  min-width: 330px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #636161;
   border-radius: 6px;
 }
 
-
 .btn {
-  padding: 10px;
-  background-color: #4caf50;
+  padding: 10px ;
+  font-size: 15px;
   color: white;
-  border-color:white ;
+  background-color: #43a047; 
+  border: none;
+  border-radius: 6px;
 }
+
 
 
 .result {
   padding: 10px;
-  width: 370px;
+  font-size: 16px;
   border: 1px solid #636161;
   border-radius: 6px;
-  margin: 0px;
+  width: 100%;
+  height: 42px; 
+  box-sizing: border-box;
 }
 
 
 
+#rangeList {
+  display: block;   
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .range {
+  display: block;    
+  margin-bottom: 6px;
   border: 1px solid #636161;
-  padding: 6px 8px;
-  margin: 6px;
-  font-size: 14px;
+  padding: 6px 10px;
   border-radius: 6px;
-} 
+
+}
+
+
+
+.score-box {
+  margin-top: 40px;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.scoreInput {
+  max-width: 140px;
+  padding: 8px;
+  border: 1px solid #636161;
+  border-radius: 6px;
+}
+
+
+
