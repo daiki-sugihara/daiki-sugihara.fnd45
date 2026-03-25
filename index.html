@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>ゴルフ支援webアプリ</title>
+  <title>Golf guide(ゴルフガイド)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./golf.css" />
 </head>
 
 <body>
+  <h1 class="main-title">Golf guide (ゴルフガイド)⛳️🏌️‍♂️</h1>
   <main class="box">
 
-    <h1 class="title">最適クラブセレクター</h1>
+    <h1 class="title">Club guide(クラブガイド)</h1>
     <p style="color:#1f1f1f; font-size:16px;">
       残りヤード数を入力すると、おすすめのクラブを表示します。
     </p>
@@ -24,18 +25,18 @@
 
         <h3>残りヤード数入力</h3>
         <div>
-          <input id="yardInput" class="input" type="number" placeholder="残りヤード数(yd)">
+          <input id="yardInput" class="input" type="number" placeholder="残りヤード数 [yd]">
         </div>
 
         <div style="height:30px;"></div>
 
-        <h3>風（向かい風・追い風）</h3>
-        <input id="windInput" class="input" type="number" placeholder="向かい風=プラス / 追い風=マイナス（m/s）">
+        <h3>風速 [m/s]（向かい風・追い風）</h3>
+        <input id="windInput" class="input" type="number" placeholder="向かい風=プラス / 追い風=マイナス [m/s]">
 
         <div style="height:30px;"></div> 
 
-        <h3>高低差（打ち上げ・打ち下ろし）</h3>
-        <input id="slope" class="input" type="number" placeholder="打ち上げ=プラス / 打ち下ろし=マイナス">
+        <h3>高低差 [yd]（打ち上げ・打ち下ろし）</h3>
+        <input id="slope" class="input" type="number" placeholder="打ち上げ=プラス / 打ち下ろし=マイナス [yd]">
 
         <div style="height:30px;"></div> 
 
@@ -66,7 +67,7 @@
 
   <div class="box score-box">
 
-    <h1 class="title">スコアカウンター</h1>
+    <h1 class="title">Score guide(スコアガイド)</h1>
     <p style="color:#1f1f1f; font-size:16px;">各ホールのスコアを入力してください。</p>
 
     <div class="score-grid">
